@@ -1,0 +1,19 @@
+@startuml
+start
+
+:s = "Python is Fun!";
+:v = "aeiouAEIOU";
+:cnt = Counter([]);
+
+partition "Loop: for i in s" {
+  :i in s ?;
+  if (i in v?) then (yes)
+    :Append i to the list within Counter;
+  else (no)
+  endif
+}
+
+:print(cnt);
+
+stop
+@enduml
